@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CrearActivity" >
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="193dp"
+        android:layout_marginLeft="16dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="66dp">
+
+            <TextView
+                android:id="@+id/lblNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre: " />
+
+            <EditText
+                android:id="@+id/txtNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="66dp">
+
+            <TextView
+                android:id="@+id/lblDescripcion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descripción: " />
+
+            <EditText
+                android:id="@+id/txtDescripciona"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="66dp">
+
+            <TextView
+                android:id="@+id/lblTipo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Tipo: " />
+
+            <Spinner
+                android:id="@+id/spOpciones"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="66dp">
+
+            <TextView
+                android:id="@+id/lblFoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seleccionar una imagen:" />
+
+            <Button
+                android:id="@+id/btnSeleccionar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seleccionar foto" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <ImageView
+        android:id="@+id/imgFoto"
+        android:layout_width="match_parent"
+        android:layout_height="152dp"
+        app:srcCompat="@drawable/picture" />
+
+    <Button
+        android:id="@+id/btnCrear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="crear"
+        android:text="Crear recomendación" />
+
+</LinearLayout>
